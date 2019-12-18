@@ -48,4 +48,4 @@ jobs:
         host: ${{ secrets.DEPLOY_HOST }}
         username: ${{ secrets.DEPLOY_USERNAME }}
         key: ${{ secrets.DEPLOY_KEY }}
-        script: systemctl restart decidel
+        script: sudo /bin/systemctl restart decidel.service
