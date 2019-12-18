@@ -68,11 +68,6 @@ Install redis:
 
 Make sure `REDIS_URL` is set correctly in /var/app/decidel/instance/config.py
 
-### Updates
+### Deploying updates
 
-```
-. venv/bin/activate
-pip install -r requirements.txt
-rsync -avzr --delete --exclude '__pycache__*' decidel.ini default_config.py wsgi.py decidel venv <server>/var/app/decidel
-ssh -t <server> 'systemctl restart decidel'
-```
+Actual deployment is handled by the [Deploy Action](.github/workflows/deploy.yml).
