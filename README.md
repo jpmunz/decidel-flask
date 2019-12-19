@@ -36,4 +36,10 @@ Make sure redis is installed
   FLASK_APP=decidel FLASK_ENV=development flask run
 ```
 
+### Deployment
+
+See [these instructions](https://development-recipes.readthedocs.io/en/latest/hosting.html) for initial setup.
+
+Actual deployment is handled by the [Deploy Action](.github/workflows/deploy.yml).
+
 ![](https://github.com/jpmunz/decidel-flask/workflows/Build%20and%20Deploy/badge.svg)
