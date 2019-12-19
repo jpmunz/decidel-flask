@@ -1,3 +1,6 @@
+![deploy status](https://github.com/jpmunz/decidel-flask/workflows/Build%20and%20Deploy/badge.svg)
+![code style: prettier](https://img.shields.io/badge/code_style-black-000000.svg?style=plastic")
+
 Swagger UI at https://api.decidel.ca/v1/docs
 
 [Front-end](https://github.com/jpmunz/decidel-web) at https://decidel.ca
@@ -41,5 +44,3 @@ Make sure redis is installed
 See [these instructions](https://development-recipes.readthedocs.io/en/latest/hosting.html) for initial setup.
 
 Actual deployment is handled by the [Deploy Action](.github/workflows/deploy.yml).
-
-![](https://github.com/jpmunz/decidel-flask/workflows/Build%20and%20Deploy/badge.svg)
