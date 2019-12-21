@@ -38,7 +38,7 @@ jobs:
         flags: '-avzr --delete'
         options: ''
         ssh_options: ''
-        src: 'decidel.ini default_config.py wsgi.py decidel venv'
+        src: 'decidel.ini default_config.py wsgi.py decidel requirements.txt'
         dest: ${{ secrets.DEPLOY_DESTINATION }}
     - name: Display status from deploy
       run: echo "${{ steps.deploy.outputs.status }}"
@@ -48,4 +48,9 @@ jobs:
         host: ${{ secrets.DEPLOY_HOST }}
         username: ${{ secrets.DEPLOY_USERNAME }}
         key: ${{ secrets.DEPLOY_KEY }}
-        script: sudo /bin/systemctl restart decidel.service
+        script: |
+          cd /var/app/decidel/
+          python3 -m venv venv
+          venv/bin/pip install --upgrade pip
+          venv/bin/pip install -r requirements.txt
+          sudo /bin/systemctl restart decidel.service
